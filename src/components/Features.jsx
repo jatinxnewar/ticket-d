@@ -13,7 +13,6 @@ export default function Features() {
       <header className="flex items-center justify-between bg-gray-100 px-4 py-3 md:px-6 md:py-4">
         <div className="flex items-center">
           <img src="/placeholder.svg" alt="Ticket'd Logo" width={32} height={32} className="mr-2" />
-          <img src="/placeholder.svg" alt="Ticket'd Logo" width={32} height={32} className="mr-2" />
           <h1 className="text-lg font-bold">TICKET'D</h1>
         </div>
         <nav className="hidden md:flex items-center space-x-6">

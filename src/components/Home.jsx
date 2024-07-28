@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { TicketIcon, LockIcon, TagIcon, CalendarIcon } from './Icons';
 import ticketImage from './images/TICKET.png';
 import a from './images/a.jpg';
+import b from './images/b.jpg';
+import event from './images/Event.jpg';
+import bitcoin from './images/bitcoin.jpg';
 import Features from './Features'; // Import the Features component
 
 const Home = () => {
@@ -14,10 +17,10 @@ const Home = () => {
           <span className="sr-only">TICKET'D</span>
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link to="/Features" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link to="#" className="text-sm font-medium hover:underline underline-offset-4">
             About
           </Link>
-          <Link to="#" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link to="/Features" className="text-sm font-medium hover:underline underline-offset-4">
             Features
           </Link>
           <Link to="#" className="text-sm font-medium hover:underline underline-offset-4">
@@ -93,7 +96,7 @@ const Home = () => {
                 </div>
               </div>
               <img
-                src={ticketImage}
+                src={bitcoin}
                 width="550"
                 height="310"
                 alt="Image"
@@ -108,7 +111,7 @@ const Home = () => {
           <div className="container px-4 md:px-6">
             <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-12">
               <img
-                src={ticketImage}
+                src={b}
                 width="550"
                 height="310"
                 alt="Image"
@@ -151,7 +154,7 @@ const Home = () => {
                 </div>
               </div>
               <img
-                src={ticketImage}
+                src={event}
                 width="550"
                 height="310"
                 alt="Image"
