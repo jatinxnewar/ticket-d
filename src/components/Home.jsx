@@ -15,17 +15,24 @@ const Home = () => {
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link to="/Features" className="text-sm font-medium hover:underline underline-offset-4">
+            About
+          </Link>
+          <Link to="#" className="text-sm font-medium hover:underline underline-offset-4">
             Features
           </Link>
           <Link to="#" className="text-sm font-medium hover:underline underline-offset-4">
-            Pricing
-          </Link>
-          <Link to="#" className="text-sm font-medium hover:underline underline-offset-4">
-            About
+            Price
           </Link>
           <Link to="#" className="text-sm font-medium hover:underline underline-offset-4">
             Contact
           </Link>
+          <Link to="/login" className="text-sm font-medium hover:underline underline-offset-4">
+            Login
+          </Link>
+          <Link to="/signup" className="text-sm font-medium hover:underline underline-offset-4">
+            Sign up
+          </Link>
+
         </nav>
       </header>
       <main className="flex-1">
