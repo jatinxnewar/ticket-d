@@ -18,13 +18,13 @@ export default function Features() {
         </div>
         <nav className="hidden md:flex items-center space-x-6">
           <Link to="#" className="text-sm font-medium hover:underline">
-            About
-          </Link>
-          <Link to="#" className="text-sm font-medium hover:underline">
             Features
           </Link>
           <Link to="#" className="text-sm font-medium hover:underline">
-            Trade
+            Pricing
+          </Link>
+          <Link to="#" className="text-sm font-medium hover:underline">
+            About
           </Link>
           <Link to="#" className="text-sm font-medium hover:underline">
             Contact
