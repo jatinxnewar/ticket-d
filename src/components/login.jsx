@@ -11,7 +11,7 @@ const Login = () => {
     // Here you would typically make an API call to authenticate the user
     console.log('Login attempted with:', { email, password });
     // For now, we'll just simulate a successful login
-    navigate('/');
+    navigate('/LoggedIn');
   };
 
   return (
