@@ -64,6 +64,7 @@ export default function Features() {
                     <p className="text-gray-600">{event.price}</p>
                     <p className="text-gray-600">{event.tickets} tickets left</p>
                     <p className="text-gray-600">Headliner: {event.headliner}</p>
+                    <button className='bg-white text-black border border-black rounded-lg px-2 py-1 font-medium tracking-tighter m-2'>Buy now</button>
                   </div>
                 </CardContent>
               </Card>
