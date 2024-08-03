@@ -96,7 +96,15 @@ const Home = () => {
         <div className="flex items-center">
           <TicketIcon className="mr-2" />
           <h1 className="text-lg font-bold">TICKET'D</h1>
+          <div>
+            <input
+              type="text"
+              className="border-gray-200 border  md:w-auto md:pr-auto rounded-lg px-1 mx-1 md:px-5 md:mx-5 focus:outline-none"
+              placeholder="Search for events"
+            />
+          </div>
         </div>
+
         <nav className="hidden sm:flex items-center space-x-6">
           <Link to="./Features" className="text-sm font-medium hover:underline">
             Features
@@ -104,9 +112,9 @@ const Home = () => {
           {/* <Link to="#" className="text-sm font-medium hover:underline"> */}
           {/*   Pricing */}
           {/* </Link> */}
-          {/* <Link to="#" className="text-sm font-medium hover:underline"> */}
-          {/*   About */}
-          {/* </Link> */}
+          <Link to="/community" className="text-sm font-medium hover:underline">
+            Community
+          </Link>
           <Link to="#" className="text-sm font-medium hover:underline">
             Contact
           </Link>
@@ -126,7 +134,7 @@ const Home = () => {
             </Link>
           </div>
         </nav>
-        <Button variant="outline" size="sm" className="md:hidden">
+        <Button variant="outline" size="sm" className="sm:hidden">
           <MenuIcon className="h-5 w-5" />
           <span className="sr-only">Toggle menu</span>
         </Button>

@@ -92,9 +92,9 @@ const LoggedIn = () => {
           {/* <Link to="#" className="text-sm font-medium hover:underline"> */}
           {/*   About */}
           {/* </Link> */}
-          {/* <Link to="#" className="text-sm font-medium hover:underline"> */}
-          {/*   Contact */}
-          {/* </Link> */}
+          <Link to="/community" className="text-sm font-medium hover:underline">
+            Community
+          </Link>
           <Link to="./Profile" className="text-sm font-medium hover:underline">
             Profile
           </Link>
