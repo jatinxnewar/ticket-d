@@ -8,6 +8,8 @@ import bitcoin from "./images/bitcoin.jpg";
 
 import clsx from "clsx";
 
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 const SectionInfo = [
   {
     title: "Secure Transactions",
@@ -34,8 +36,15 @@ const SectionInfo = [
     isWhite: false,
   },
 ];
-
 const FeatureSection = ({ title, heading, description, src, isWhite }) => {
+  const image = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: image,
+    offset: ["start end", "end end"],
+  });
+  const rotateX = useTransform(scrollYProgress, [0, 1], [45, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
   return (
     <section
       className={clsx("w-full py-12 md:py-24 lg:py-32 ", {
@@ -63,13 +72,22 @@ const FeatureSection = ({ title, heading, description, src, isWhite }) => {
             </div>
           </div>
         </div>
-        <img
-          src={src}
-          width="550"
-          height="310"
-          alt="Image"
-          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-        />
+        <motion.div
+          style={{
+            opacity,
+            rotateX,
+            transformPerspective: "800px",
+          }}
+        >
+          <img
+            ref={image}
+            src={src}
+            width="550"
+            height="310"
+            alt="Image"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+          />
+        </motion.div>
       </div>
     </section>
   );
@@ -90,13 +108,6 @@ const FeaturesLI = () => {
           >
             Home
           </Link>
-
-          {/* <Link */}
-          {/*   to="#" */}
-          {/*   className="text-sm font-medium hover:underline underline-offset-4" */}
-          {/* > */}
-          {/*   Contact */}
-          {/* </Link> */}
         </nav>
       </header>
       <main className="flex-1">
@@ -140,6 +151,7 @@ const FeaturesLI = () => {
         </section>
         {SectionInfo.map(({ title, heading, description, src, isWhite }) => (
           <FeatureSection
+            key={title}
             title={title}
             heading={heading}
             description={description}
