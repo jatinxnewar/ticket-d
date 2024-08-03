@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { TicketIcon, LockIcon, TagIcon, CalendarIcon } from "./Icons";
-import ticketImage from "./images/TICKET.png";
+import { TicketIcon, TagIcon } from "./Icons";
 import a from "./images/a.jpg";
 import b from "./images/b.jpg";
 import event from "./images/Event.jpg";
@@ -39,6 +38,14 @@ const SectionInfo = [
 ];
 
 const FeatureSection = ({ title, heading, description, src, isWhite }) => {
+  const image = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: image,
+    offset: ["start end", "end end"],
+  });
+  const rotateX = useTransform(scrollYProgress, [0, 1], [45, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
   return (
     <section
       className={clsx("w-full py-12 md:py-24 lg:py-32 ", {
@@ -66,26 +73,28 @@ const FeatureSection = ({ title, heading, description, src, isWhite }) => {
             </div>
           </div>
         </div>
-        <motion.img
-          src={src}
-          width="550"
-          height="310"
-          alt="Image"
-          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
-        />
+        <motion.div
+          style={{
+            opacity,
+            rotateX,
+            transformPerspective: "800px",
+          }}
+        >
+          <img
+            ref={image}
+            src={src}
+            width="550"
+            height="310"
+            alt="Image"
+            className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full"
+          />
+        </motion.div>
       </div>
     </section>
   );
 };
 
 const Features = () => {
-  const secure = useRef < HTMLImageElement > null;
-  const { scrollYProgress } = useScroll({
-    target: secure,
-    offset: ["start end", "end end"],
-  });
-  const rotateX = useTransform(scrollYProgress, [0, 1], [45, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -165,6 +174,7 @@ const Features = () => {
         </section>
         {SectionInfo.map(({ title, heading, description, src, isWhite }) => (
           <FeatureSection
+            key={title}
             title={title}
             heading={heading}
             description={description}
