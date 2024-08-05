@@ -8,6 +8,8 @@ import LoggedIn from "./components/LoggedIn";
 import FeaturesLI from "./components/FeaturesLI";
 import Community from "./components/Community";
 import profile from "./components/profile";
+import BuyNowPage from './components/BuyNowPage';
+import YourComponent from './components/YourComponent';
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="/LoggedIn" element={<LoggedIn />} />
         <Route path="/LoggeIn/profile" element={<profile />} />
         <Route path="/community" element={<Community />} />
+        <Route path="/buy-now" element={<BuyNowPage />} />
+        <Route path="/" element={<YourComponent />} />
         {/* Add more routes as needed */}
       </Routes>
     </Router>
