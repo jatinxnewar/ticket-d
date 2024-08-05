@@ -12,7 +12,7 @@ import event1 from "./images/Event-1.jpg";
 import event2 from "./images/Event-2.jpg";
 import event3 from "./images/Event-3.jpg";
 import event4 from "./images/Event-5.jpg";
-import event5 from "./images/Event-6.jpg";
+import event5 from "./images/EVENT-6.jpg";
 import event6 from "./images/Event-7.jpg";
 import event7 from "./images/Event-8.jpg";
 
