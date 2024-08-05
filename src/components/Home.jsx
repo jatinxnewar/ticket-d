@@ -85,7 +85,7 @@ const events = [
         price: "690BBN",
         tickets: 15,
         headliner: "Ed Sheeran",
-        src: event2,
+        src: event3,
     },
 ];
 
