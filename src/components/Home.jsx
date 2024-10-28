@@ -87,6 +87,13 @@ const events = [
         headliner: "Ed Sheeran",
         src: event3,
     },
+    {
+        name: "Shambhala 2024",
+        price: "300BBN",
+        tickets: 30,
+        headliner: "Bassnectar",
+        src: event6,
+    },
 ];
 
 const Home = () => {
@@ -106,6 +113,12 @@ const Home = () => {
                 </div>
 
                 <nav className="hidden sm:flex items-center space-x-6 py-4">
+                <Link
+                        to="/community"
+                        className="text-sm font-medium hover:underline"
+                    >
+                        Auction
+                    </Link>
                     <Link
                         to="./Features"
                         className="text-sm font-medium hover:underline"
